@@ -1,0 +1,375 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<?page contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/app/autos/principal-autos-nivel2.zul"?>
+<?meta og:title="Mercedes Benz Videos" og:image='https://www.mercedesbenzfinancial.com.mx/SiteClientes/zkau/view/z_lfq/gI7Qb/pa2/1/c/Car-11.jpg' ?>
+<zk xmlns:h="http://www.w3.org/1999/xhtml" xmlns:zk="http://www.zkoss.org/2005/zk" xmlns:n="http://www.zkoss.org/2005/zk/native">     
+  <div apply="com.daimler.clientes.view.autos.VideosVW" id="dvVideosVW" self="@{define(content)}" align="center" class="divPrincipal">   
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : $fb_app_Id,
+            xfbml      : true,
+            version    : 'v2.2'
+          });
+        };      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>             
+      <h:link href="../../../js/video/video-js.css" rel="stylesheet" />
+      <h:script src="../../../js/video/video.js"></h:script>
+      <h:script>videojs.options.flash.swf = "../../../js/video/video-js.swf"</h:script>
+      <h:script type="text/css" language="Css">
+         .vjs-default-skin .vjs-play-progress, .vjs-default-skin .vjs-volume-level { 
+            background-color: #36627a 
+         } 
+         .vjs-default-skin .vjs-control-bar, .vjs-default-skin .vjs-big-play-button { 
+            background: rgba(114,86,86,0.7) 
+         } 
+         .vjs-default-skin .vjs-slider { 
+            background: rgba(114,86,86,0.2333333333333333) 
+         } .vjs-default-skin .vjs-control-bar 
+         { 
+            font-size: 100% 
+         }
+      </h:script>
+      <style>
+         #dvReproductor 
+         { 
+            background-color: #FFFFFF; 
+         } 
+         .divPrincipal{ 
+            width:817px; 
+            height:550px; 
+            background:url('../../../images/videos/videos.jpg'); 
+            background-size: 100% 100%;
+            margin-top:30px; 
+            margin-bottom:30px; 
+            margin-left:6%; 
+            margin-right:10%; 
+         } 
+         .aTituloVideo { 
+            font-family: arial; 
+            font-size: 16px; 
+            color: #FFFFFF; 
+            text-decoration: none;
+            border-bottom: 5px; 
+            margin-top: 22px; 
+            float:left; 
+            display:inline; 
+         } 
+         a.aTituloVideo:link, a.aTituloVideo :visited { 
+            font-family: arial, sans-serif; 
+            font-size: 16px; 
+            color: #FFFFFF; 
+            text-decoration: none; 
+            background-color: rgba(0,0,0,0); 
+            border-bottom: 5px; 
+            float:left; 
+            display:inline; 
+         } 
+         a.aTituloVideo:hover { 
+            font-family: arial, sans-serif;
+            font-size: 16px; 
+            color: #00BFFF; 
+            text-decoration: none; 
+            background-color: rgba(0,0,0,0); 
+            border-bottom: 5px; 
+            float:left; 
+            display:inline; 
+         } 
+         .tituloVideos {
+            position:relative; 
+            top: -67px; 
+            right: 59px; 
+            font-family: times, sans-serif; 
+            font-size: 30px; 
+            color: #FFFFFF; 
+         } 
+         .divListaVideos { 
+            position:relative; 
+            top: 100px; 
+            right: 200px; 
+         } 
+         .divVideo { 
+            width: 50%; 
+            background-color: rgba(0,0,0,0); 
+            border-bottom: 1px solid #FFFFFF; 
+            padding-left: 0px; 
+            padding-bottom: 40px; 
+            margin-left: 51px; 
+         } 
+         .divIcono {          
+            width: 40px; 
+            height: 40px; 
+            float:right; 
+            display:inline; 
+            margin-left: 0px; 
+            margin-top: 0px; 
+         } 
+         .imgIcono { 
+            width: 30px; 
+            height: 30px;
+            margin-top: 9px; 
+            margin-left: 12.5px; 
+         }         
+         .twitter-button {
+            display: inline-block;
+            padding: 1px 3px 0 19px;
+            border: #ccc solid 1px;
+            border-radius: 3px;
+            background: #f8f8f8 url(//platform.twitter.com/images/bird.png) 2px 3px no-repeat;
+            background: url(//platform.twitter.com/images/bird.png) 2px 3px no-repeat,-webkit-linear-gradient(#fff, #dedede);
+            background: url(//platform.twitter.com/images/bird.png) 2px 3px no-repeat,linear-gradient(#fff, #dedede);
+            background-size: 16px 13px, auto auto;            
+            /* Text */
+             font: bold 11px/17px Helvetica, Arial, sans-serif;
+            text-decoration: none;
+            color: #333;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+            white-space: nowrap;
+         }
+         .share_button {
+            color: #fff;
+            background-color:#354c8c;
+            cursor: pointer;
+            font-weight: bold;
+            height: 20px;
+            line-height: 20px;
+            padding: 0;
+            text-shadow: 0 -1px 0 #354c8c;
+            white-space: nowrap;
+         }         
+         .dvFacebookShare {
+            color: #fff;            
+            background-color:#3B579D;
+            display:inline;
+            float:left;
+            padding-right:4px;
+            padding-bottom:2px;
+            padding-top:0px;
+            padding-left:0px;
+            border-color: 1px #24428C;
+            border-radius: 2px;
+         }
+         .dvFacebookShare a{
+            text-decoration: none;
+            color: #fff;
+            font-weight:bold;
+            font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;            
+         }
+         .dvFacebookShare a div{
+            display:inline;
+            float:left;
+            margin-top: 2px;
+         }
+         .dvFacebookShare img{
+            display:inline;
+            float:left;
+            margin-top:1px;
+            margin-right: 2px;
+         }        
+      </style>
+      <h:link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" />
+      <h:script src="//code.jquery.com/jquery-1.10.2.js"></h:script>
+      <h:script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></h:script>
+      <h:script type="text/javascript" language="JavaScript">
+         var $tituloVideo='';
+         var $descripcionVideo=''; 
+         var $archivoVideo='';
+      </h:script>
+      <h:script type="text/javascript" language="JavaScript">
+         <![CDATA[ 
+            $( document ).ready(function() {            	
+            	window.twttr = (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      t = window.twttr || {};
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                   
+                    t._e = [];
+                    t.ready = function(f) {
+                      t._e.push(f);
+                    };
+                   
+                    return t;
+                  }(document, "script", "twitter-wjs"));
+            	
+               $("#dvReproductor").hide(); 
+               var video = getUrlVars()["v"];               
+               if(video !== undefined){            	   
+            	   if(video == 'c' |video ==  'c#_=_'){            		   
+            		   self.close();            		   
+            	   }
+            	   else{
+               	      video =  video.replace(/%2F/g, "/");            	   
+               	   	  $("#dvReproductor").show("puff");                   
+                      var $vid_obj = _V_("vdDaimler"); 
+                      $("video:nth-child(1)").attr("src",video); 
+                      $("video:nth-child(1)").attr("type",'video/mp4'); 
+                      $vid_obj.load(); 
+                      $("#dvVideos").hide();
+                      $(".vjs-big-play-button").hide(); 
+                      var delay=700; 
+                      setTimeout(function(){
+                      var $vid_obj = _V_("vdDaimler"); 
+                      $vid_obj.play(); },delay);
+            	   }
+               }
+                             
+            }); 
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+            $(".aTituloVideo").click(function(e) {               
+               $("#dvReproductor").show("puff"); 
+               var $target = $(this).attr("href");
+               $archivoVideo=$target;
+               $tituloVideo = $(this).text();               
+               $descripcionVideo = $(this).attr("title");                              
+               $("#aCompartirTwitter").attr("data-text",$descripcionVideo);                            
+               reproducirVideo($archivoVideo);
+               e.preventDefault();
+               e.stopImmediatePropagation(); 
+            }); 
+            $(".aIconoVideo").click(function(e) {               
+            	$("#dvReproductor").show("puff"); 
+               var $target = $(this).attr("href"); 
+               $archivoVideo=$target;               
+               $tituloVideo = $(this).attr("target");               
+               $descripcionVideo = $(this).attr("title");                              
+               $("#aCompartirTwitter").attr("data-text",$descripcionVideo);               
+               reproducirVideo($archivoVideo);
+               e.preventDefault();
+               e.stopImmediatePropagation(); 
+            });           
+            function reproducirVideo (srcVideo){            	
+            	var $vid_obj = _V_("vdDaimler"); 
+            	$("video:nth-child(1)").attr("src",srcVideo); 
+                $("video:nth-child(1)").attr("type",'video/mp4'); 
+                $vid_obj.load(); 
+                $("#dvVideos").hide();
+                $(".vjs-big-play-button").hide();
+                var delay=700; 
+                setTimeout(function(){ 
+                   var $vid_obj = _V_("vdDaimler"); 
+                   $vid_obj.play();
+                },delay);
+            }
+         ]]>  
+      </h:script>      
+      <h:script type="text/javascript" language="JavaScript">         
+         <![CDATA[ 
+             $('#vdDaimler').bind("ended", function() { 
+          	   regresar(); 
+          	}); 
+             $('#vdDaimler').bind("loadeddata", function() { 
+          	   var $vid_obj = _V_("vdDaimler"); 
+          	   $vid_obj.play(); 
+          	});
+         ]]>       			
+		</h:script>      
+      <h:script type="text/javascript" language="JavaScript">
+         <![CDATA[
+            function regresar(e){ 
+               $("#dvReproductor").hide("puff"); 
+               var $vid_obj = _V_("vdDaimler"); 
+               $vid_obj.pause(); 
+               $vid_obj.currentTime(0); 
+               $("#dvVideos").show("puff"); 
+            }            
+         ]]>
+      </h:script>
+      <div>
+         <div id="dvContenedor">
+            <h:div id="dvReproductor">
+               <h:table id="cabeceraVideo" style="width:829px;" align="center">
+                  <h:tr>
+                     <h:td >
+                        <h:table>
+                           <h:tr>
+                              <h:td>                                 
+                                 <script>                                    
+                                    function compartirFacebook(){
+                                       var redirect_uri = window.location.protocol+'//'+window.location.host+window.location.pathname+'?v=c';
+                                       var url = window.location.protocol+'//'+window.location.host+window.location.pathname+'?v='+$archivoVideo;                                       
+                                       var $vid_obj = _V_("vdDaimler");
+                                       $vid_obj.pause();
+                                       window.open('https://www.facebook.com/v2.2/dialog/feed?app_id='+$fb_app_Id+'&amp;caption='+$captionVideos+'&amp;description='+$descripcionVideo+'&amp;display=popup&amp;link='+url+'&amp;name='+ $tituloVideo+'&amp;picture=https://www.mercedesbenzfinancial.com.mx/SiteClientes/images/principal/Asian_PC_2014_037.jpg&amp;redirect_uri='+redirect_uri+'&amp;sdk=joey&amp;version=v2.2' ,"", "toolbar=no, scrollbars=no, resizable=no, top=200, left=200, width=800, height=300");                                       
+                                    }
+                                 </script>
+                                 <script>                                                                         
+                                    function compartirTwitter(){
+                                       var $vid_obj = _V_("vdDaimler");                                      
+                                       $vid_obj.pause();                                       
+                                       var url = window.location.protocol+'//'+window.location.host+window.location.pathname+'?v='+$archivoVideo;
+                                       var dir='https://twitter.com/intent/tweet?original_referer='+window.location.protocol+'//'+window.location.host+window.location.pathname+'&amp;text='+$tituloVideo+'&amp;tw_p=tweetbutton&amp;url='+url;                                                       
+                                       if($twitterHashtags != '') {
+                                          dir=dir+'&amp;hashtags='+$twitterHashtags;
+                                       }
+                                       if($twitterVia != '') {
+                                          dir=dir+'&amp;via='+$twitterVia;
+                                       }                                       
+                                       window.open(dir,"", "toolbar=no, scrollbars=no, resizable=no, top=200, left=200, width=800, height=300");
+                                       /*window.open('https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fcafsdx027764353.usafs.corpintra.net%3A8080%2FsitioClientes%2Fapp%2Fcommon%2Fvideos%2Fvideos.zul&amp;text='+$tituloVideo+'&amp;tw_p=tweetbutton&amp;url='+url ,"", "toolbar=no, scrollbars=no, resizable=no, top=200, left=200, width=800, height=300");*/                                       
+                                    }                                    
+                                 </script>
+                                 <div class="dvFacebookShare">                                    
+                                    <h:a href="javascript:compartirFacebook()"><h:img src='https://fbstatic-a.akamaihd.net/rsrc.php/v2/yQ/r/7GFXgco-uzw.png' /><h:div>Compartir</h:div></h:a>
+                                 </div>
+                                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="chopperD3V" data-count="none">Tweet</a>
+                                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                 <div id="dvTwitter" style="display:inline;float:left;margin-left:10px;">
+                                    <h:meta name="twitter:card" content="photo" />
+                                    <h:meta name="twitter:site" content="@livechopper" />
+                                    <h:meta name="twitter:title" content="" />
+                                    <h:meta name="twitter:image" content="https://www.mercedesbenzfinancial.com.mx/SiteClientes/images/principal/Asian_PC_2014_037.jpg" />
+                                    <h:meta name="twitter:url" content="http://cafsdx027764353.usafs.corpintra.net:8080/sitioClientes/app/common/videos/videos.zul" />                                                                                                           
+                                    <h:a class="twitter-button" href="javascript:compartirTwitter()">Tweet</h:a>                                                                      
+                                    <script>
+                                       !function(d,s,id){var
+                                       js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,
+                                       'script', 'twitter-wjs');
+                                    </script>                                                                        
+                                 </div>
+                                 <div id="dvTest"></div>                                
+                              </h:td>
+                           </h:tr>
+                        </h:table>
+                     </h:td>
+                     <h:td style="align:right;">
+                        <div align="right">
+                                 <button  id="btnRegresar" label="${c:l('btnRegresarVideo')}" class="boton" xmlns:w="http://www.zkoss.org/2005/zk/client" w:onClick="regresar();" />
+                        </div>                        
+                     </h:td>
+                  </h:tr>
+               </h:table>
+               <h:video id="vdDaimler" width="829px" height="518px" class="video-js vjs-default-skin" data-setup="{}" controls="true" src="../../../videos/test.mp4">
+                  <h:p class="vjs-no-js">
+                     To view this video please enable JavaScript, and consider upgrading to a web browser that
+                     <h:a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</h:a>
+                  </h:p>
+               </h:video>
+            </h:div>
+            <h:div id="dvVideos" class="divListaVideos">
+               <div>
+                  <label class="tituloVideos" value="${c:l('lblTituloVideos') }" />
+               </div>
+               <div id="dvListaVideos"></div>
+            </h:div>
+         </div>
+      </div>
+      
+  </div>  
+</zk>

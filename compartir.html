@@ -23,6 +23,11 @@
       <meta name="twitter:description" content="This twitter card don´t especify a URL">
       <meta name="twitter:image:src" content="https://www.mercedesbenzfinancial.com.mx/SiteClientes/images/principal/Asian_PC_2014_037.jpg">
    </head>   
+   <script type="text/javascript">
+    function update(){
+      alert("aqui toy");
+    }
+   </script>
    <body>
     <div>
       <table>
@@ -30,8 +35,14 @@
           <td> Title:</td>
           <td> <input type="text" id="txtTitle"/></td> 
         </tr>
-        <tr></tr>
-        <tr></tr>
+        <tr>
+          <td> Description:</td>
+          <td> <input type="text" id="txtDesc"/></td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> <input type="button" id="btnUpdate" onClick="update();"/>Actualizar </td>
+        </tr>
       </table>  
     </div>
     <div>

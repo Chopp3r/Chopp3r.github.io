@@ -26,7 +26,10 @@
    <script type="text/javascript">
     function update(){
       var title=document.getElementById('txtTitle').value;
-      alert(title);      
+      /*alert(title);      */
+      var x = document.getElementsByTagName("twitter:title")[0];         
+      x.setAttribute("content", title);
+      
     }
    </script>
    <body>

@@ -25,12 +25,7 @@
    </head>   
    <script type="text/javascript">
     function update(){
-      alert("Aqui toy de nuevo");
-      var title=$("#txtTitle").attr('text');
-      alert(title);
-      
-
-      $('[name="twitter:title"]').attr("content",$("#txtTitle").text());
+      alert("Aqui toy de nuevo");      
     }
    </script>
    <body>
@@ -46,7 +41,7 @@
         </tr>
         <tr>
           <td> </td>
-          <td> <input type="button" id="btnUpdate" onClick="update();">Actualizar</input> </td>
+          <td> <input type="button" id="btnUpdate" label="Actualizar"  onClick="update();"/> </td>
         </tr>
       </table>  
     </div>

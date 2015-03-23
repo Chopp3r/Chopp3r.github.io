@@ -25,7 +25,8 @@
    </head>   
    <script type="text/javascript">
     function update(){
-      alert($("#txtTitle").attr('value'));
+      var title=$("#txtTitle").attr('value');
+      alert(title);
       
 
       $('[name="twitter:title"]').attr("content",$("#txtTitle").text());

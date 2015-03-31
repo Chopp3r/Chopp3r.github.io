@@ -22,28 +22,7 @@
       <meta name="twitter:title" content="En esta sección se desplegaría un titulo para la sección de videos">
       <meta name="twitter:description" content="Esta sería una descripción para la seccion de videos, que compartirían todos los links compartidos en Twitter.">
       <meta name="twitter:image:src" content="http://chopp3r.github.io/vista-previa-videos/Mercedes-Benz_Insurance_VC.jpg">      
-      <script>
-         function compartirFacebook(){
-            var $descripcionVideo='Renuévalo';
-            var $archivoVideo=foo.mp4;
-            var $tituloVideo=foo;
-            var $fb_app_Id =936298599784869;
-            var $captionVideos = 'Daimler financial services';
-            var image_url='http://chopp3r.github.io/vista-previa-videos/Flexibility_Mercedes-Benz_Financial.jpg';
-            var redirect_uri = 'http://cafsdx027764353.usafs.corpintra.net:8080/sitioClientes/app/common/videos/videos.zul?v=c';
-            /*$descripcionVideo = removeDiacritics ($descripcionVideo);
-            alert($descripcionVideo);*/
-            /*$descripcionVideo=$descripcionVideo.replace(/[\u0065\u24D4\uFF45\u00E8\u00E9\u00EA\u1EC1\u1EBF\u1EC5\u1EC3\u1EBD\u0113\u1E15\u1E17\u0115\u0117\u00EB\u1EBB\u011B\u0205\u0207\u1EB9\u1EC7\u0229\u1E1D\u0119\u1E19\u1E1B\u0247\u025B\u01DD]/g, "&eacute;");*/
-            var redirect_uri = window.location.protocol+'//'+window.location.host+window.location.pathname+'?v=c';
-            var url = window.location.protocol+'//'+window.location.host+window.location.pathname+'?v='+$archivoVideo;                                       
-            var $vid_obj = _V_("vdDaimler");
-            $vid_obj.pause();                                        
-            //var image_url = window.location.protocol+'//'+window.location.host+$rutaVistaPrevia.replace(/ /g, "")+$tituloVideo.replace(/ /g, "_")+'.jpg';
-            var image_url = 'http://chopp3r.github.io/vista-previa-videos/'+$tituloVideo.replace(/ /g, "_")+'.jpg';                                       
-            window.open('https://www.facebook.com/v2.2/dialog/feed?app_id='+$fb_app_Id+'&amp;caption='+$captionVideos+'&amp;description=R&eacute;nuevalo&amp;display=page&amp;link='+url+'&amp;name='+ $tituloVideo+'&amp;picture='+image_url+'&amp;redirect_uri='+redirect_uri+'&amp;sdk=joey&amp;version=v2.2' ,"_blank", "");
-            /*window.open('https://www.facebook.com/v2.2/dialog/feed?app_id='+$fb_app_Id+'&amp;caption='+$captionVideos+'&amp;description='+$descripcionVideo+'&amp;display=popup&amp;link='+url+'&amp;name='+ $tituloVideo+'&amp;picture=https://www.mercedesbenzfinancial.com.mx/SiteClientes/images/principal/Asian_PC_2014_037.jpg&amp;redirect_uri='+redirect_uri+'&amp;sdk=joey&amp;version=v2.2' ,"", "toolbar=no, scrollbars=no, resizable=no, top=200, left=200, width=800, height=300");*/                                       
-         }
-   </script>
+      
       
    </head> 
    <style>
@@ -79,7 +58,28 @@
       
     }
    </script>
-   
+   <script type="text/javascript">
+         function compartirFacebook(){
+            var $descripcionVideo='Renuévalo';
+            var $archivoVideo=foo.mp4;
+            var $tituloVideo=foo;
+            var $fb_app_Id =936298599784869;
+            var $captionVideos = 'Daimler financial services';
+            var image_url='http://chopp3r.github.io/vista-previa-videos/Flexibility_Mercedes-Benz_Financial.jpg';
+            var redirect_uri = 'http://cafsdx027764353.usafs.corpintra.net:8080/sitioClientes/app/common/videos/videos.zul?v=c';
+            /*$descripcionVideo = removeDiacritics ($descripcionVideo);
+            alert($descripcionVideo);*/
+            /*$descripcionVideo=$descripcionVideo.replace(/[\u0065\u24D4\uFF45\u00E8\u00E9\u00EA\u1EC1\u1EBF\u1EC5\u1EC3\u1EBD\u0113\u1E15\u1E17\u0115\u0117\u00EB\u1EBB\u011B\u0205\u0207\u1EB9\u1EC7\u0229\u1E1D\u0119\u1E19\u1E1B\u0247\u025B\u01DD]/g, "&eacute;");*/
+            var redirect_uri = window.location.protocol+'//'+window.location.host+window.location.pathname+'?v=c';
+            var url = window.location.protocol+'//'+window.location.host+window.location.pathname+'?v='+$archivoVideo;                                       
+            var $vid_obj = _V_("vdDaimler");
+            $vid_obj.pause();                                        
+            //var image_url = window.location.protocol+'//'+window.location.host+$rutaVistaPrevia.replace(/ /g, "")+$tituloVideo.replace(/ /g, "_")+'.jpg';
+            var image_url = 'http://chopp3r.github.io/vista-previa-videos/'+$tituloVideo.replace(/ /g, "_")+'.jpg';                                       
+            window.open('https://www.facebook.com/v2.2/dialog/feed?app_id='+$fb_app_Id+'&amp;caption='+$captionVideos+'&amp;description=R&eacute;nuevalo&amp;display=page&amp;link='+url+'&amp;name='+ $tituloVideo+'&amp;picture='+image_url+'&amp;redirect_uri='+redirect_uri+'&amp;sdk=joey&amp;version=v2.2' ,"_blank", "");
+            /*window.open('https://www.facebook.com/v2.2/dialog/feed?app_id='+$fb_app_Id+'&amp;caption='+$captionVideos+'&amp;description='+$descripcionVideo+'&amp;display=popup&amp;link='+url+'&amp;name='+ $tituloVideo+'&amp;picture=https://www.mercedesbenzfinancial.com.mx/SiteClientes/images/principal/Asian_PC_2014_037.jpg&amp;redirect_uri='+redirect_uri+'&amp;sdk=joey&amp;version=v2.2' ,"", "toolbar=no, scrollbars=no, resizable=no, top=200, left=200, width=800, height=300");*/                                       
+         }
+   </script>
    <body>
     <div>
       <table>
@@ -102,7 +102,7 @@
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>                               
     </div>
     <div class="dvFacebookShare">                                    
-         <a href="javascript:compartirFacebook();" onClick="compartirFacebook();"><div>Compartir</div></a>
+         <input type ="button" onClick="compartirFacebook();" value="Publicar">
       </div>
    </body>
 </html>

@@ -26,25 +26,8 @@
           $( document ).ready(function(){
           	document.getElementById('vdDaimler').setAttribute("src", "https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4");
      	     document.getElementById('vdDaimler').setAttribute("type","video/mp4");
-     	     document.getElementById('vdDaimler').style.display = 'none';
+     	     document.getElementById('vdDaimler').style.display = "none";
           });
-          $(".aTituloVideo").click(function(e) {													
-			$("#dvPlayer").show();												
-			var $target = $(this).attr("href"); 
-			var $vid_obj = _V_("vdDaimler"); 
-		       	$("video:nth-child(1)").attr("src",$target); 
-	                 $("video:nth-child(1)").attr("type",'video/mp4'); 
-	                 $vid_obj.load(); 
-	                 $("#dvVideos").hide();
-	                 $(".vjs-big-play-button").hide();          
-	                 var delay=700; 
-	                 setTimeout(function(){
-	                 	var $vid_obj = _V_("vdDaimler"); 
-	                     $vid_obj.play();
-	                 },delay);
-			e.preventDefault();
-		   	e.stopImmediatePropagation();
-		});
      </script>
  </head>
 <body>

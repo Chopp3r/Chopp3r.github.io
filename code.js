@@ -1,1 +1,1 @@
-$( document ).ready(function() {	alert('here');});				
+$( document ).ready(function(){alert('here');});				

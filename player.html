@@ -1,9 +1,9 @@
 <html>
 <head>
-<link href="js/video/video-js.css" rel="stylesheet" />
-<script src="js/video/video.js"></script>
+<link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+<script src="//vjs.zencdn.net/4.12/video.js"></script>
 <script language="Css">        
-     videojs.options.flash.swf = "js/video/video-js.swf"
+     videojs.options.flash.swf = "http://example.com/path/to/video-js.swf"
    </script>
 <script type="text/css" >
      .vjs-default-skin .vjs-play-progress,
@@ -175,23 +175,9 @@ a.aTituloVideo:hover {
 </head>
 <body>
    <div>
-      <div id="dvContenido" style="background:url('images/index/Caucasian_PC_2014_006_.jpg');background-size: 100% 100%; width:829px; height:518px">
+      <div id="dvContenido" style="background-size: 100% 100%; width:829px; height:518px">
          <div id="dvReproductor">
-            <div align="right">       
-               <div class="dvFacebookShare">
-                  <a href="javascript:compartirFacebook();">
-                     <img src='https://fbstatic-a.akamaihd.net/rsrc.php/v2/yQ/r/7GFXgco-uzw.png' />
-                     <div>Compartir</div>
-                  </a>
-               </div>
-               <div id="dvTwitter">
-                  <a class="twitter-button" href="javascript:compartirTwitter();">Tweet</a>
-                  <script>
-                         !function(d,s,id){var
-                         js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,
-                         'script', 'twitter-wjs');
-                      </script>
-               </div>
+            <div align="right">     
             </div>
             <video id="vdDaimler" width="829px" height="518px" class="video-js vjs-default-skin" style="z-index:0;" data-setup="{}" controls>              
                

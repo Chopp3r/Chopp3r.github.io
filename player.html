@@ -24,19 +24,29 @@
    <script  src="jquery-1.11.2.js"></script>
      <script type="text/javascript">        
           $( document ).ready(function(){
-               var videoURL;
           	document.getElementById('vdDaimler').setAttribute("src", "https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4");
      	     document.getElementById('vdDaimler').setAttribute("type","video/mp4");
-     	     videoURL = getUrlVars()["v"];	
-     	     alert(videoURL);
+     	     $("#dvReproductor").hide();
           });
-          function getUrlVars() {
-                var vars = {};
-                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-                    vars[key] = value;
-                });
-                return vars;
-            }
+          $(".aTituloVideo").click(function(e) {													
+			$("#dvReproductor").show();												
+			var $target = $(this).attr("href"); 
+			
+			var $vid_obj = _V_("vdDaimler"); 
+	       	$("video:nth-child(1)").attr("src",srcVideo); 
+                 $("video:nth-child(1)").attr("type",'video/mp4'); 
+                 $vid_obj.load(); 
+                 $("#dvVideos").hide();
+                 $(".vjs-big-play-button").hide();          
+                 var delay=700; 
+                 setTimeout(function(){
+                 	var $vid_obj = _V_("vdDaimler"); 
+                     $vid_obj.play();
+                 },delay);				
+			
+			e.preventDefault();
+		   	e.stopImmediatePropagation();
+		});
      </script>
  </head>
 <body>
@@ -45,11 +55,15 @@
          <div id="dvReproductor">
             <div align="right">     
             </div>
+            <div id="dvReproductor">
             <video id="example_video_1" class="video-js vjs-default-skin"  controls  width="640" height="264"
- <source src="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_PC.mp4" type='video/mp4' />
- 
- <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-</video>
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+               </video>
+               </div>
+               <div >
+                    <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4" target="#"> Video 1</a>
+                    <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4" target="#"> Video 2</a>
+               </div>
          </div>
          
       </div>

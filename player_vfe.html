@@ -4,8 +4,8 @@
 	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 	<script >
 		$( document ).ready(function() {
-		    console.log( "ready!" );
-		    alert("ready!!!!!!!");
+		    document.getElementById('vdDaimler').setAttribute("src", "https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_PC.mp4");
+		    document.getElementById('vdDaimler').setAttribute("type","video/mp4");
 		}); 
 	</script>
 </head>
@@ -13,9 +13,9 @@
 	
 <!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
 <!-- warning: playback does not work on iOS3 if you include the poster attribute! fixed in iOS4.0 -->
-<video width="640" height="360" controls>
+<video id='vdDaimler' width="640" height="360" controls>
 	<!-- MP4 must be first for iPad! -->
-	<source src="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_PC.mp4" type="video/mp4" /><!-- Safari / iOS video    -->
+	<!--<source src="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_PC.mp4" type="video/mp4" />--><!-- Safari / iOS video    -->
 	
 	<!-- fallback to Flash: -->
 	<object width="640" height="360" type="application/x-shockwave-flash" data="http://example.com/path/to/video-js.swf">
@@ -23,8 +23,7 @@
 		<param name="movie" value="http://example.com/path/to/video-js.swf" />
 		<param name="flashvars" value="controlbar=over&amp;file=https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_PC.mp4" />
 		<!-- fallback image. note the title field below, put the title of the video there -->
-		<img src="__VIDEO__.JPG" width="640" height="360" alt="test "
-		     title="No video playback capabilities, please download the video below" />
+	
 	</object>
 </video>
 <!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want -->

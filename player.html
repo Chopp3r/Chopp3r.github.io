@@ -26,24 +26,22 @@
           $( document ).ready(function(){
           	document.getElementById('vdDaimler').setAttribute("src", "https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4");
      	     document.getElementById('vdDaimler').setAttribute("type","video/mp4");
-     	     $("#dvReproductor").hide();
+     	     $("#dvPlayer").hide();
           });
           $(".aTituloVideo").click(function(e) {													
-			$("#dvReproductor").show();												
+			$("#dvPlayer").show();												
 			var $target = $(this).attr("href"); 
-			
 			var $vid_obj = _V_("vdDaimler"); 
-	       	$("video:nth-child(1)").attr("src",srcVideo); 
-                 $("video:nth-child(1)").attr("type",'video/mp4'); 
-                 $vid_obj.load(); 
-                 $("#dvVideos").hide();
-                 $(".vjs-big-play-button").hide();          
-                 var delay=700; 
-                 setTimeout(function(){
-                 	var $vid_obj = _V_("vdDaimler"); 
-                     $vid_obj.play();
-                 },delay);				
-			
+		       	$("video:nth-child(1)").attr("src",$target); 
+	                 $("video:nth-child(1)").attr("type",'video/mp4'); 
+	                 $vid_obj.load(); 
+	                 $("#dvVideos").hide();
+	                 $(".vjs-big-play-button").hide();          
+	                 var delay=700; 
+	                 setTimeout(function(){
+	                 	var $vid_obj = _V_("vdDaimler"); 
+	                     $vid_obj.play();
+	                 },delay);
 			e.preventDefault();
 		   	e.stopImmediatePropagation();
 		});
@@ -52,15 +50,15 @@
 <body>
    <div>
       <div id="dvContenido" style="background-size: 100% 100%; width:829px; height:518px">
-         <div id="dvReproductor">
+         <div >
             <div align="right">     
             </div>
-            <div id="dvReproductor">
+            <div id="dvPlayer">
             <video id="example_video_1" class="video-js vjs-default-skin"  controls  width="640" height="264"
                 <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
                </video>
                </div>
-               <div >
+               <div id="dvVideos">
                     <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4" target="#"> Video 1</a>
                     <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4" target="#"> Video 2</a>
                </div>

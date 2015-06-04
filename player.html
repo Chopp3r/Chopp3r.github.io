@@ -30,14 +30,6 @@
      	     document.getElementById('vdDaimler').setAttribute("type","video/mp4");
      	});
      </script>
-     <script type="text/javascript">        
-          $(".aTituloVideo").click(function(e) {													
-			$("#dvPlayer").show();												
-			e.preventDefault();
-		   	e.stopImmediatePropagation();
-		   		   			   			   		   	
-		});
-     </script>
  </head>
 <body>
    <div>
@@ -53,6 +45,13 @@
                <div id="dvVideos">
                     <a class="aTituloVideo" href="#" target="#"> Video 1</a>
                     <a class="aTituloVideo" href="#" target="#"> Video 2</a>
+                    <script type="text/javascript">        
+          		$(".aTituloVideo").click(function(e) {													
+			$("#dvPlayer").show();												
+			e.preventDefault();
+		   	e.stopImmediatePropagation();
+			});
+     		     </script>
                </div>
          </div>
          

@@ -2,28 +2,14 @@
 <head>
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	<script >
+		$( document ).ready(function() {
+		    console.log( "ready!" );
+		}); 
+	</script>
 </head>
 <body>
-	<script >
-		$( document ).ready(function() {  
-			//var videoURL = getUrlVars()["v"];
-			alert("Aqui toy!!!!!!!!");
-			/*if(videoURL !== undefined){            	   
-	          	  if(videoURL == 'c' | videoURL ==  'c#_=_'){            		   
-	          		  self.close();            		   
-	          	  }
-	          	  else{
-	          	  	alert("video: "+videoURL);
-	          	  }*/
-		});
-		/*function getUrlVars() {
-                var vars = {};
-                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-                    vars[key] = value;
-                });
-                return vars;*/
-            }   
-	</script>
+	
 <!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
 <!-- warning: playback does not work on iOS3 if you include the poster attribute! fixed in iOS4.0 -->
 <video width="640" height="360" controls>

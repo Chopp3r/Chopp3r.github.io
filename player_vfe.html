@@ -1,5 +1,24 @@
 <html>
 <head>
+	<script type="text/javascript">
+		$( document ).ready(function() {  
+			var videoURL = getUrlVars()["v"];			
+			if(videoURL !== undefined){            	   
+	          	  if(videoURL == 'c' | videoURL ==  'c#_=_'){            		   
+	          		  self.close();            		   
+	          	  }
+	          	  else{
+	          	  	alert("video: "+videoURL);
+	          	  }
+		});
+		function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }   
+	</script>
 </head>
 <body>
 <!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->

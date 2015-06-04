@@ -26,12 +26,12 @@
           $( document ).ready(function(){
           	document.getElementById('vdDaimler').setAttribute("src", "https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4");
      	     document.getElementById('vdDaimler').setAttribute("type","video/mp4");
-     	     var videoURL = getUrlVars()["v"];
+     	     var videoURL = getUrlVars("v");
      	     alert(videoURL);
           });
      </script>
       <script type="text/javascript">      
-     function getUrlVars() {
+     function getUrlVars(key) {
                 var vars = {};
                 var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
                     vars[key] = value;

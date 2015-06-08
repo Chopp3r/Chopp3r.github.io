@@ -47,7 +47,9 @@
                     <a class="aTituloVideo" href="#" target="#"> Video 2</a>
                     <script type="text/javascript">        
           		$(".aTituloVideo").click(function(e) {													
-			$("#dvPlayer").show();												
+			$("#dvPlayer").show();			
+			document.getElementById('vdDaimler').setAttribute("src", "https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4");
+     	     		document.getElementById('vdDaimler').setAttribute("type","video/mp4");
 			e.preventDefault();
 		   	e.stopImmediatePropagation();
 			});

@@ -47,16 +47,15 @@
                     <a class="aTituloVideo" href="#" target="#"> Video 2</a>
                     <script type="text/javascript">        
           		$(".aTituloVideo").click(function(e) {													
-			$("#dvPlayer").show();			
-			/*document.getElementById('vdDaimler').setAttribute("src", "https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4");
-     	     		document.getElementById('vdDaimler').setAttribute("type","video/mp4");*/
-		       	$("video:nth-child(1)").attr("src","https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4"); 
-		        $("video:nth-child(1)").attr("type",'video/mp4'); 
-		        //document.getElementById('vdDaimler').play();   
-		        //$vid_obj.load(); 
+			$("#dvPlayer").show();	
+			reproducirVideo ("https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4");
 			e.preventDefault();
 		   	e.stopImmediatePropagation();
 			});
+			function reproducirVideo (srcVideo){			
+				$("video:nth-child(1)").attr("src",srcVideo); 
+		        	$("video:nth-child(1)").attr("type",'video/mp4'); 
+		        }
      		     </script>
                </div>
          </div>

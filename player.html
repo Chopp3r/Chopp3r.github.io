@@ -43,12 +43,13 @@
                </video>
                </div>
                <div id="dvVideos">
-                    <a class="aTituloVideo" href="#" target="#"> Video 1</a>
-                    <a class="aTituloVideo" href="#" target="#"> Video 2</a>
+                    <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4" target="#"> Video 1</a>
+                    <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4" target="#"> Video 2</a>
                     <script type="text/javascript">        
           		$(".aTituloVideo").click(function(e) {													
 			$("#dvPlayer").show();	
-			reproducirVideo ("https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4");
+			var $target = $(this).attr("href"); 
+			reproducirVideo ($target);
 			e.preventDefault();
 		   	e.stopImmediatePropagation();
 			});

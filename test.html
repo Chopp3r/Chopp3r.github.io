@@ -66,8 +66,7 @@
                e.preventDefault();
 	       e.stopImmediatePropagation();
                var $target = $(this).attr("href");
-               //var vid = document.createElement('video');
-               var vid = document.getElementById('vdDaimler');
+               var vid = document.createElement('video');
                vid.src = $target;
                vid.onclick = function () { 	vid.play(); //start loading, didn't used `vid.load()` since it causes problems with the `ended` event
                 	if(vid.readyState !== 4){ //HAVE_ENOUGH_DATA
@@ -82,6 +81,10 @@
                 	};
                vid.onended = function (){alert("here ");};
                vid.setAttribute("controls", "true");
+               var myNode = document.getElementById("video-holder");
+	       while (myNode.firstChild) {
+		    myNode.removeChild(myNode.firstChild);
+	       }
                document.getElementById('video-holder').appendChild(vid);
           });
      </script>

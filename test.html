@@ -63,7 +63,8 @@
                 		//video is ready
                 	}
                 	};
-               //vid.onended = function (){alert("here ");};
+               vid.onended = function (){alert("here ");};
+               vid.setAttribute("data-setup", "{'controls': true}");
                document.getElementById('video-holder').appendChild(vid);
        
      	});

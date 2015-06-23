@@ -52,6 +52,18 @@
           $( document ).ready(function(){
                var vid = document.createElement('video');
                vid.src = 'https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4';
+               vid.onclick = function () { 	vid.play(); //start loading, didn't used `vid.load()` since it causes problems with the `ended` event
+       
+                	if(vid.readyState !== 4){ //HAVE_ENOUGH_DATA
+                		vid.addEventListener('canplaythrough', onCanPlay, false);
+                		vid.addEventListener('load', onCanPlay, false); //add load event as well to avoid errors, sometimes 'canplaythrough' won't dispatch.
+                		setTimeout(function(){
+                			vid.pause(); //block play so it buffers before playing
+                		}, 1); //it needs to be after a delay otherwise it doesn't work properly.
+                	}else{
+                		//video is ready
+                	}
+                	}};
                document.getElementById('video-holder').appendChild(vid);
        
      	});

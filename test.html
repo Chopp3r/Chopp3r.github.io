@@ -60,12 +60,11 @@
           <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4" target="#"> Video 1</a>
           <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4" target="#"> Video 2</a>     
      </div>
-     <div id="video-holder">
-          
-     </div>
      <script type="text/javascript">
           $(".aTituloVideo").click(function(e) {
                //$("#video-holder").show();
+               e.preventDefault();
+		e.stopImmediatePropagation();
                var $target = $(this).attr("href");
                var vid = document.createElement('video');
                vid.src = $target;
@@ -83,9 +82,11 @@
                vid.onended = function (){alert("here ");};
                vid.setAttribute("controls", "true");
                document.getElementById('video-holder').appendChild(vid);
-               e.preventDefault();
-		   	e.stopImmediatePropagation();
           });
      </script>
+     <div id="video-holder">
+          
+     </div>
+     
 </body>
 </html>

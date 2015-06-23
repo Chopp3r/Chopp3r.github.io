@@ -63,9 +63,7 @@
                 		//video is ready
                 	}
                 	};
-               vid.addEvent("ended", function(){ 
-                 alert('Here I am');
-               });
+               vid.onended = function (){alert("here ");};
                document.getElementById('video-holder').appendChild(vid);
        
      	});

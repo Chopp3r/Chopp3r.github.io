@@ -6,10 +6,7 @@
      videojs.options.flash.swf = "http://example.com/path/to/video-js.swf"
 </script>
 <script type="text/javascript">        
-      var vid = document.createElement('video');
-      vid.src = 'lol_catz.mp4';
-      document.getElementById('video-holder').appendChild(vid);
-       
+      
       //this function should be called on a click event handler otherwise video won't start loading
       function initVideo(){
       	vid.play(); //start loading, didn't used `vid.load()` since it causes problems with the `ended` event
@@ -53,7 +50,10 @@
    <script  src="jquery.min.js"></script>
      <script type="text/javascript">        
           $( document ).ready(function(){
-               $("#dvPlayer").hide();
+               var vid = document.createElement('video');
+               vid.src = 'https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4';
+               document.getElementById('video-holder').appendChild(vid);
+       
      	});
      </script>
  </head>

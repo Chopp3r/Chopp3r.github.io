@@ -53,6 +53,16 @@
                //$("#video-holder").hide();
      	});
      </script>
+     
+ </head>
+<body>
+     <div id="dvVideos">
+          <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4" target="#"> Video 1</a>
+          <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4" target="#"> Video 2</a>     
+     </div>
+     <div id="video-holder">
+          
+     </div>
      <script type="text/javascript">
           $(".aTituloVideo").click(function(e) {
                //$("#video-holder").show();
@@ -75,16 +85,7 @@
                document.getElementById('video-holder').appendChild(vid);
                e.preventDefault();
 		   	e.stopImmediatePropagation();
-          }
+          });
      </script>
- </head>
-<body>
-     <div id="dvVideos">
-          <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4" target="#"> Video 1</a>
-          <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4" target="#"> Video 2</a>     
-     </div>
-     <div id="video-holder">
-          
-     </div>
 </body>
 </html>

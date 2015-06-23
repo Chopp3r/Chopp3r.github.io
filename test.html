@@ -50,8 +50,15 @@
    <script  src="jquery.min.js"></script>
      <script type="text/javascript">        
           $( document ).ready(function(){
+               $("#video-holder").hide();
+     	});
+     </script>
+     <script type="text/javascript">
+          $(".aTituloVideo").click(function(e) {
+               $("#video-holder").show();
+               var $target = $(this).attr("href");
                var vid = document.createElement('video');
-               vid.src = 'https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4';
+               vid.src = $target;
                vid.onclick = function () { 	vid.play(); //start loading, didn't used `vid.load()` since it causes problems with the `ended` event
                 	if(vid.readyState !== 4){ //HAVE_ENOUGH_DATA
                 		vid.addEventListener('canplaythrough', onCanPlay, false);
@@ -66,11 +73,14 @@
                vid.onended = function (){alert("here ");};
                vid.setAttribute("controls", "true");
                document.getElementById('video-holder').appendChild(vid);
-       
-     	});
+          }
      </script>
  </head>
 <body>
+     <div id="dvVideos">
+          <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4" target="#"> Video 1</a>
+          <a class="aTituloVideo" href="https://www.daimlerfinancialservices.com.mx/videos/Flexibility_smart.mp4" target="#"> Video 2</a>     
+     </div>
      <div id="video-holder">
           
      </div>

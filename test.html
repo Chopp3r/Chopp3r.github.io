@@ -73,6 +73,8 @@
                vid.onended = function (){alert("here ");};
                vid.setAttribute("controls", "true");
                document.getElementById('video-holder').appendChild(vid);
+               e.preventDefault();
+		   	e.stopImmediatePropagation();
           }
      </script>
  </head>

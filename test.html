@@ -79,7 +79,7 @@
                 		//video is ready
                 	}
                 	};
-               vid.onended = function (){alert("here ");};
+               vid.onended = function (){$("#video-holder").hide();};
                vid.setAttribute("controls", "true");
                var myNode = document.getElementById("video-holder");
 	       while (myNode.firstChild) {

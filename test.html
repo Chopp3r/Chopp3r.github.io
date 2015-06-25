@@ -79,7 +79,7 @@
                 		//video is ready
                 	}
                 	};
-               vid.onended = function (){$("#video-holder").hide();};
+               vid.onended = function (){ document.getElementById('video-holder').hide();};
                vid.setAttribute("controls", "true");
                //vid.setAttribute("class", "claseCss"); 
                var videoHolder = document.getElementById("video-holder");

@@ -68,6 +68,7 @@
                var $target = $(this).attr("href");
                var vid = document.createElement('video');
                vid.src = $target;
+               vid.class = "video-js vjs-default-skin vjs-big-play-centered";
                vid.onclick = function () { 	vid.play(); //start loading, didn't used `vid.load()` since it causes problems with the `ended` event
                 	if(vid.readyState !== 4){ //HAVE_ENOUGH_DATA
                 		vid.addEventListener('canplaythrough', onCanPlay, false);
@@ -81,9 +82,9 @@
                 	};
                vid.onended = function (){$("#video-holder").hide();};
                vid.setAttribute("controls", "true");
-               var myNode = document.getElementById("video-holder");
-	       while (myNode.firstChild) {
-		    myNode.removeChild(myNode.firstChild);
+               var video-holder = document.getElementById("video-holder");
+	       while (video-holder.firstChild) {
+		    video-holder.removeChild(myNode.firstChild);
 	       }
                document.getElementById('video-holder').appendChild(vid);
           });

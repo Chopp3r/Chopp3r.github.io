@@ -68,7 +68,7 @@
                var $target = $(this).attr("href");
                var vid = document.createElement('video');
                vid.src = $target;
-               vid.attr("class","video-js vjs-default-skin vjs-big-play-centered") ;
+               vid.className ="video-js vjs-default-skin vjs-big-play-centered" ;
                vid.onclick = function () { 	vid.play(); //start loading, didn't used `vid.load()` since it causes problems with the `ended` event
                 	if(vid.readyState !== 4){ //HAVE_ENOUGH_DATA
                 		vid.addEventListener('canplaythrough', onCanPlay, false);

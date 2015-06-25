@@ -82,9 +82,9 @@
                vid.onended = function (){$("#video-holder").hide();};
                vid.setAttribute("controls", "true");
                //vid.setAttribute("class", "claseCss"); 
-               var video-holder = document.getElementById("video-holder");
-	       while (video-holder.firstChild) {
-		    video-holder.removeChild(video-holder.firstChild);
+               var videoHolder = document.getElementById("video-holder");
+	       while (videoHolder.firstChild) {
+		    videoHolder.removeChild(videoHolder.firstChild);
 	       }
                document.getElementById('video-holder').appendChild(vid);
           });

@@ -26,10 +26,13 @@
    <script  src="jquery.min.js"></script>
      <script type="text/javascript">
           $( document ).ready(function(){
+          	function finVideo() {
+          		alert("It's over");
+	   	}
                var video2 = document.getElementById("vdDaimler2");
                video2.src = "https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4";
                video2.attr("type",'video/mp4')
-               video2.addEventListener('ended', onSeAcabo, false);
+               video2.addEventListener('ended', finVideo, false);
      	});
      </script>
      
@@ -47,7 +50,6 @@
 	      e.stopImmediatePropagation();
           });
           function onSeAcabo() {
-          	alert("It's over");
 	   	   $("#video-holder").hide();
 	   	}
           function playVideo(srcVid){

@@ -79,7 +79,7 @@
                 		//video is ready
                 	}
                 	};
-               vid.onended = function (){ ocultarPlayer(); };
+               vid.onended = function (){ document.getElementById('video-holder').hide;};
                vid.setAttribute("controls", "true");
                //vid.setAttribute("class", "claseCss"); 
                var videoHolder = document.getElementById("video-holder");
@@ -88,9 +88,7 @@
 	       }
                document.getElementById('video-holder').appendChild(vid);
           });
-          function ocultarPlayer(){
-          	document.getElementById('video-holder').hide;
-          }
+          
      </script>
      <div id="video-holder" style="background-color:#000;">
           

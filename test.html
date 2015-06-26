@@ -51,6 +51,7 @@
                 	if(vid.readyState !== 4){ //HAVE_ENOUGH_DATA
                 		vid.addEventListener('canplaythrough', onCanPlay, false);
                 		vid.addEventListener('load', onCanPlay, false); //add load event as well to avoid errors, sometimes 'canplaythrough' won't dispatch.
+                		vid.addEventListener('ended', onSeAcabo, false);
                 		setTimeout(function(){
                 			vid.pause(); //block play so it buffers before playing
                 		}, 1); //it needs to be after a delay otherwise it doesn't work properly.
@@ -62,7 +63,7 @@
                vid.setAttribute("controls", "true");
                vid.setAttribute("autoplay", "true");
                var videoHolder = document.getElementById("video-holder");
-	       vid.onended = function(){ alert("Here !!!!!!"); };
+	       //vid.onended = function(){ alert("Here !!!!!!"); };
 	       while (videoHolder.firstChild) {
 		    videoHolder.removeChild(videoHolder.firstChild);
 	       }
@@ -74,7 +75,9 @@
 			//video is ready
 			vid.play();
 		}
-		
+	   function onSeAcabo() {
+	   	alert("Se acabo !!!!!!!");
+	   }		
      </script>
      <div id="video-holder" style="background-color:#000;">
           

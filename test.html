@@ -62,9 +62,13 @@
      </div>
      <script type="text/javascript">
           $(".aTituloVideo").click(function(e) {
-               //$("#video-holder").show();
-               e.preventDefault();
-	       e.stopImmediatePropagation();
+              playVideo();
+              e.preventDefault();
+	      e.stopImmediatePropagation();
+          });
+          function playVideo(){
+          	  //$("#video-holder").show();
+              
                var $target = $(this).attr("href");
                var vid = document.createElement('video');
                vid.setAttribute("id","vdDaimler");
@@ -80,7 +84,7 @@
                 		//video is ready
                 	}
                 	};
-               vid.onpaused = function (){var video = document.getElementById('vdDaimler'); alert(video);};
+               
                vid.setAttribute("controls", "true");
                vid.setAttribute("autoplay", "true");
                var videoHolder = document.getElementById("video-holder");
@@ -88,7 +92,7 @@
 		    videoHolder.removeChild(videoHolder.firstChild);
 	       }
                document.getElementById('video-holder').appendChild(vid);
-          });
+          }
           function onCanPlay(){
 			vid.removeEventListener('canplaythrough', onCanPlay, false);
 			vid.removeEventListener('load', onCanPlay, false);

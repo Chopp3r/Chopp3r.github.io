@@ -81,8 +81,9 @@
                 	};
                vid.onpause = function (){  
                	var video = document.getElementsByTagName('video')[0];
-    		if (video.currentTime()==video.duration()){
-               		alert("Here !!!");
+    		if (video.currentTime()!= video.duration()){
+    		}else {
+    			alert("Here !!!");
     		}
                };
                vid.setAttribute("controls", "true");

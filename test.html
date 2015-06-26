@@ -24,9 +24,15 @@
    <script  src="jquery-1.11.2.js"></script>
    <script  src="jquery-ui.js"></script>
    <script  src="jquery.min.js"></script>
-     <script type="text/javascript">        
+     <script type="text/javascript">
+     	  function finVideo() {
+	   	alert("Se acabo");
+	  }
           $( document ).ready(function(){
-               //$("#video-holder").hide();
+               var video2 = document.getElementById("vdDaimler2");
+               video2.src = "https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4";
+               video2.attr("type",'video/mp4')
+               video2.addEventListener('ended', finVideo, false);
      	});
      </script>
      
@@ -85,5 +91,8 @@
      <div id="video-holder" style="background-color:#000;">
           
      </div>
+     <video id="vdDaimler2" class="video-js vjs-default-skin"  controls  width="640" height="264" data-setup='{"autoload": true}' showlogo="false">
+      
+     </video>
 </body>
 </html>

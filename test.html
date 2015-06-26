@@ -81,7 +81,7 @@
                 	};
                vid.onended = function (){  $("#video-holder").hide();};
                vid.setAttribute("controls", "true");
-               //vid.setAttribute("class", "claseCss"); 
+               vid.setAttribute("autoplay", "true");
                var videoHolder = document.getElementById("video-holder");
 	       while (videoHolder.firstChild) {
 		    videoHolder.removeChild(videoHolder.firstChild);

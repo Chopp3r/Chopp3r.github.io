@@ -80,11 +80,7 @@
                 	}
                 	};
                vid.onpause = function (){  
-              
-    		if (vid.currentTime() < vid.duration()){
-    		}else {
-    			alert("Here !!!");
-    		}
+    		alert(vid.currentTime());
                };
                vid.setAttribute("controls", "true");
                vid.setAttribute("autoplay", "true");

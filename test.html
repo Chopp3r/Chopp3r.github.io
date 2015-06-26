@@ -79,6 +79,7 @@
                 		//video is ready
                 	}
                 	};
+               vid.onpause = function (){  alert("Here !!!");};
                vid.onended = function (){  alert("Here !!!");$("#video-holder").hide();};
                vid.setAttribute("controls", "true");
                vid.setAttribute("autoplay", "true");

@@ -32,7 +32,7 @@
                var video2 = document.getElementById("vdDaimler2");
                video2.src = "https://www.daimlerfinancialservices.com.mx/videos/Mercedes-Benz_Insurance_VC.mp4";
                video2.attr("type",'video/mp4')
-               video2.addEventListener('ended', function () {alert("It's over");}, false);
+               video2.onended = function(){ alert("Here !!!!!!"); };
      	});
      </script>
      

@@ -80,7 +80,8 @@
                 	}
                 	};
                vid.onpause = function (){  
-    		alert(vid.currentTime());
+               	var video = document.getElementsByTagName('video')[0];
+    		    alert(video.currentTime());
                };
                vid.setAttribute("controls", "true");
                vid.setAttribute("autoplay", "true");

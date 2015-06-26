@@ -79,8 +79,12 @@
                 		//video is ready
                 	}
                 	};
-               vid.onpause = function (){  alert("Here !!!");};
-               vid.onended = function (){  alert("Here !!!");$("#video-holder").hide();};
+               vid.onpause = function (){  
+               	var video = document.getElementsByTagName('video')[0];
+    		if (!video.webkitDisplayingFullscreen){
+               		alert("Here !!!");
+    		}
+               };
                vid.setAttribute("controls", "true");
                vid.setAttribute("autoplay", "true");
                var videoHolder = document.getElementById("video-holder");

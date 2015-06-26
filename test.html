@@ -68,6 +68,9 @@
 		    videoHolder.removeChild(videoHolder.firstChild);
 	       }
                document.getElementById('video-holder').appendChild(vid);
+               function onSeAcabo() {
+	   	   alert("Se acabo !!!!!!!");
+	   	}
           }
           function onCanPlay(){
 			vid.removeEventListener('canplaythrough', onCanPlay, false);
@@ -75,9 +78,7 @@
 			//video is ready
 			vid.play();
 		}
-	   function onSeAcabo() {
-	   	alert("Se acabo !!!!!!!");
-	   }		
+	   		
      </script>
      <div id="video-holder" style="background-color:#000;">
           

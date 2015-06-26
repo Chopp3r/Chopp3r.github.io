@@ -80,8 +80,8 @@
                 	}
                 	};
                vid.onpause = function (){  
-               	var video = document.getElementsByTagName('video')[0];
-    		if (video.currentTime()!= video.duration()){
+              
+    		if (vid.currentTime() < vid.duration()){
     		}else {
     			alert("Here !!!");
     		}

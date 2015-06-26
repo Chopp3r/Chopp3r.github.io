@@ -81,7 +81,7 @@
                 	};
                vid.onpause = function (){  
                	var video = document.getElementsByTagName('video')[0];
-    		if (!video.webkitDisplayingFullscreen){
+    		if (video.currentTime()==video.duration()){
                		alert("Here !!!");
     		}
                };

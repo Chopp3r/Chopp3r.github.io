@@ -62,6 +62,7 @@
                vid.setAttribute("controls", "true");
                vid.setAttribute("autoplay", "true");
                var videoHolder = document.getElementById("video-holder");
+	       vid.ontimeupdate = function () { if(vid.currentTime == vid.duration){ alert("Here !!!"); } };
 	       while (videoHolder.firstChild) {
 		    videoHolder.removeChild(videoHolder.firstChild);
 	       }
